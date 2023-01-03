@@ -1,7 +1,7 @@
 
 name: "Workflow with not pinned dependency"
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 
 permissions:
   contents: read
