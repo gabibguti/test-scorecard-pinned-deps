@@ -1,0 +1,15 @@
+
+name: "Workflow with not pinned dependency"
+on:
+  workflow-dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  simple-job:
+    name: "Simple job"
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2 # Not pinned dependency
