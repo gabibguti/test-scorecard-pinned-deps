@@ -1,7 +1,10 @@
 # Dockerfile with notpinned dependencies
 
-# Not pinned container image
-FROM ubuntu:18.04
+# # Not pinned container image
+# FROM ubuntu:18.04
+
+# Pinned container image
+FROM ubuntu@sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9
 
 # Environment
 ENV DEBIAN_FRONTEND noninteractive
