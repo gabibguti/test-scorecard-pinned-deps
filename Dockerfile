@@ -10,6 +10,6 @@ SHELL ["/bin/bash", "-c"]   # Use Bash as shell
 # Not pinned download then run package
 # Install all basic requirements
 RUN \
-    apt-get update && \
-    apt-get install python3.8 && \
-    python --version
+    # Python
+    wget -nv -nc -O Miniconda3.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
+    bash Miniconda3.sh -b -p /opt/python
