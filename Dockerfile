@@ -19,4 +19,4 @@ SHELL ["/bin/bash", "-c"]   # Use Bash as shell
 RUN \
     apt-get update && \
     apt-get install python3-pip && \
-    pip3 --version
+    pip3 install pyyaml
