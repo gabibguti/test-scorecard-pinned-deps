@@ -2,8 +2,8 @@ name: "Workflow with not pinned dependency"
 on:
   workflow_dispatch:
 
-permissions:
-  contents: read
+#permissions:
+#  contents: read
 
 jobs:
   simple-job:
