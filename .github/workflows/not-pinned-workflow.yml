@@ -13,6 +13,6 @@ jobs:
 #     - name: Checkout repository
 #       uses: actions/checkout@v2 # GitHub-owned not pinned dependency
     - name: Setup R
-    - uses: r-lib/actions/setup-r@50d1eae9b8da0bb3f8582c59a5b82225fa2fe7f2 # Third-party pinned dependency
+    - uses: r-lib/actions/setup-r@f5b3dfbf1942ce68283de21bf65cce051e3a2c4d # v1
     - name: Install R packages
     - uses: r-lib/actions/setup-r-dependencies@v2 # Third-party not pinned dependency
