@@ -7,4 +7,4 @@ updates:
     schedule:
       interval: "weekly"
     # Disable version updates, keep only security updates
-    open-pull-requests-limit: 0
+    # open-pull-requests-limit: 0
