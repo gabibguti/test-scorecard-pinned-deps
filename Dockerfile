@@ -23,8 +23,11 @@ RUN \
     apt-get update && \
     apt-get install python3-pip && \
     pip3 install pyyaml && \ # Not pinned pip install
+    apt-get install python3-pip && \
     pip3 install pyyaml@6.0 && \ # Not pinned pip install
+    apt-get install python3-pip && \
     pip3 install pyyaml@8cdff2c80573b8be8e8ad28929264a913a63aa33 && \ # Pinned pip install
+    apt-get install python3-pip && \
     pip3 install pandas numpy # Double not pinned pip install
 
 # Not pinned go command
