@@ -17,16 +17,18 @@ RUN \
     wget -nv -nc -O Miniconda3.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     bash Miniconda3.sh -b -p /opt/python
 
-# Not pinned pip command
-# Install and run pip3
+# pip command
 RUN \
     apt-get update && \
     apt-get install python3-pip && \
-    pip3 install pyyaml && \ # Not pinned pip install
+    pip3 install pyyaml # Not pinned pip install
+RUN \
     apt-get install python3-pip && \
-    pip3 install pyyaml@6.0 && \ # Not pinned pip install
+    pip3 install pyyaml@6.0 # Not pinned pip install
+RUN \
     apt-get install python3-pip && \
-    pip3 install pyyaml@8cdff2c80573b8be8e8ad28929264a913a63aa33 && \ # Pinned pip install
+    pip3 install pyyaml@8cdff2c80573b8be8e8ad28929264a913a63aa33 # Pinned pip install
+RUN \
     apt-get install python3-pip && \
     pip3 install pandas numpy # Double not pinned pip install
 
