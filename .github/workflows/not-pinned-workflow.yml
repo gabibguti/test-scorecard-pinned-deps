@@ -10,9 +10,19 @@ jobs:
     name: "Simple job"
     runs-on: ubuntu-latest
     steps:
-#     - name: Checkout repository
-#       uses: actions/checkout@v2 # GitHub-owned not pinned dependency
+    - name: Checkout repository
+      uses: actions/checkout@v2 # GitHub-owned not pinned dependency
+    - name: Setup Go
+      uses: actions/setup-go@6edd4406fa81c3da01a34fa6f6343087c207a568 # Github-owned pinned dependency
+      with:
+        go-version: '>=1.17.0'
+    - name: Setup Node
+      uses: actions/setup-node@main # GitHub-owned not pinned dependency
+      with:
+        node-version: 16
     - name: Setup R
-    - uses: r-lib/actions/setup-r@f5b3dfbf1942ce68283de21bf65cce051e3a2c4d # v1
+    - uses: r-lib/actions/setup-r@f5b3dfbf1942ce68283de21bf65cce051e3a2c4d # Third-party pinned dependency
     - name: Install R packages
     - uses: r-lib/actions/setup-r-dependencies@v2 # Third-party not pinned dependency
+    - name: Install R packages
+    - uses: r-lib/actions/setup-r-dependencies@main # Third-party not pinned dependency
