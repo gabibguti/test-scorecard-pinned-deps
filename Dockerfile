@@ -32,16 +32,30 @@ RUN \
     apt-get install python3-pip && \
     pip3 install pandas numpy # Double not pinned pip install
 
-# Not pinned go command
+# go command
 # Install go
 RUN \
     apt-get update && \
     apt-get install golang-go && \
-    go install jsonpatch && \ # Not pinned go install
-    go install jsonpatch@v4.12.0 && \ # Not pinned go install
-    go install jsonpatch@50fdc0b4c9ab36933e6a0c9288fef3ac5df2b907 && \ # Pinned go install
-    go get github.com/json-iterator/go@v1.1.12 github.com/evanphx/json-patch@v0.5.2 && \ # Double not pinned go install
-    go get github.com/appscode/jsonpatch && \ # Not pinned go get
-    go get github.com/appscode/jsonpatch@v4.12.0 && \ # Not pinned go get
-    go get github.com/appscode/jsonpatch@50fdc0b4c9ab36933e6a0c9288fef3ac5df2b907 && \ # Pinned go get
+    go install jsonpatch # Not pinned go install
+RUN \
+    apt-get install golang-go && \
+    go install jsonpatch@v4.12.0 # Not pinned go install
+RUN \
+    apt-get install golang-go && \
+    go install jsonpatch@50fdc0b4c9ab36933e6a0c9288fef3ac5df2b907 # Pinned go install
+RUN \
+    apt-get install golang-go && \
+    go get github.com/json-iterator/go@v1.1.12 github.com/evanphx/json-patch@v0.5.2 # Double not pinned go install
+RUN \
+    apt-get install golang-go && \
+    go get github.com/appscode/jsonpatch # Not pinned go get
+RUN \
+    apt-get install golang-go && \
+    go get github.com/appscode/jsonpatch@v4.12.0 # Not pinned go get
+RUN \
+    apt-get install golang-go && \
+    go get github.com/appscode/jsonpatch@50fdc0b4c9ab36933e6a0c9288fef3ac5df2b907 # Pinned go get
+RUN \
+    apt-get install golang-go && \
     go get github.com/json-iterator/go@v1.1.12 github.com/evanphx/json-patch@v0.5.2 # Double not pinned go get
