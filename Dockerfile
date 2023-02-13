@@ -49,9 +49,6 @@ RUN \
     go install github.com/appscode/jsonpatch@v4.12.0 # Not pinned go install
 RUN \
     apt-get install golang-go && \
-    go install github.com/appscode/jsonpatch@v4.12.0 -insecure # Not pinned go install
-RUN \
-    apt-get install golang-go && \
     go install -insecure github.com/appscode/jsonpatch@v4.12.0 # Not pinned go install
 RUN \
     apt-get install golang-go && \
