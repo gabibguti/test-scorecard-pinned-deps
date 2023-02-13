@@ -68,3 +68,17 @@ RUN \
 RUN \
     apt-get install golang-go && \
     go get github.com/json-iterator/go@v1.1.12 github.com/evanphx/json-patch@v0.5.2 # Double not pinned go get
+
+# choco command
+RUN \
+    apt-get update && \
+    apt-get install choco && \
+    choco install tidyjson.portable # Not pinned go install
+RUN \
+    apt-get install choco && \
+    choco install tidyjson.portable@1.0.3 # Not pinned go install
+RUN \
+    apt-get install choco && \
+    choco install tidyjson.portable@27dcb6dd74de7955762d9bd498d6c3168960fc93 # Pinned go install
+
+--requirechecksum
