@@ -11,26 +11,32 @@ ENV DEBIAN_FRONTEND noninteractive
 SHELL ["/bin/bash", "-c"]   # Use Bash as shell
 
 # Not pinned download then run package
-# # Install and run anaconda miniconda3 with wget
-# RUN \
-#     # Python
-#     wget -nv -nc -O Miniconda3.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
-#     bash Miniconda3.sh -b -p /opt/python
+# Install and run anaconda miniconda3 with wget
+RUN \
+    # Python
+    wget -nv -nc -O Miniconda3.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
+    bash Miniconda3.sh -b -p /opt/python
 
 # Not pinned pip command
 # Install and run pip3
 RUN \
     apt-get update && \
     apt-get install python3-pip && \
-    pip3 install pyyaml
+    pip3 install pyyaml && \ # Not pinned pip install
+    pip3 install pyyaml@6.0 && \ # Not pinned pip install
+    pip3 install pyyaml@8cdff2c80573b8be8e8ad28929264a913a63aa33 && \ # Pinned pip install
+    pip3 install pandas numpy # Double not pinned pip install
 
+# Not pinned go command
 # Install go
 RUN \
     apt-get update && \
     apt-get install golang-go && \
-    # Not pinned go install
-    go install jsonpatch@v4.12.0 && \
-    # Pinned go install
-    go install jsonpatch@50fdc0b4c9ab36933e6a0c9288fef3ac5df2b907 && \
-    # Double not pinned go install
-    go get github.com/json-iterator/go@v1.1.12 github.com/evanphx/json-patch@v0.5.2
+    go install jsonpatch && \ # Not pinned go install
+    go install jsonpatch@v4.12.0 && \ # Not pinned go install
+    go install jsonpatch@50fdc0b4c9ab36933e6a0c9288fef3ac5df2b907 && \ # Pinned go install
+    go get github.com/json-iterator/go@v1.1.12 github.com/evanphx/json-patch@v0.5.2 && \ # Double not pinned go install
+    go get github.com/appscode/jsonpatch && \ # Not pinned go get
+    go get github.com/appscode/jsonpatch@v4.12.0 && \ # Not pinned go get
+    go get github.com/appscode/jsonpatch@50fdc0b4c9ab36933e6a0c9288fef3ac5df2b907 && \ # Pinned go get
+    go get github.com/json-iterator/go@v1.1.12 github.com/evanphx/json-patch@v0.5.2 # Double not pinned go get
