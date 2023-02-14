@@ -73,12 +73,14 @@ RUN \
 RUN \
     apt-get update && \
     apt-get install choco && \
-    choco install tidyjson.portable # Not pinned go install
+    choco install tidyjson.portable # Not pinned choco install
 RUN \
     apt-get install choco && \
-    choco install tidyjson.portable@1.0.3 # Not pinned go install
+    choco install tidyjson.portable@1.0.3 # Not pinned choco install
 RUN \
     apt-get install choco && \
-    choco install tidyjson.portable@27dcb6dd74de7955762d9bd498d6c3168960fc93 # Pinned go install
+    choco install tidyjson.portable@27dcb6dd74de7955762d9bd498d6c3168960fc93 # Pinned choco install
+RUN \
+    apt-get install choco && \
+    choco install tidyjson.portable@27dcb6dd74de7955762d9bd498d6c3168960fc93 --requirechecksum # Pinned choco install
 
---requirechecksum
