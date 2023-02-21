@@ -21,7 +21,7 @@ SHELL ["/bin/bash", "-c"]   # Use Bash as shell
 RUN \
     apt-get update && \
     apt-get install python3-pip && \
-    pip3 install pyyaml # Not pinned pip install
+    pip3 install pyyaml --require-hashes # Not pinned pip install
 RUN \
     apt-get install python3-pip && \
     pip3 install pyyaml@6.0 # Not pinned pip install
