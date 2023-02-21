@@ -27,7 +27,7 @@ RUN \
     pip3 install pyyaml@6.0  --require-hashes # Not pinned pip install
 RUN \
     apt-get install python3-pip && \
-    pip3 install pyyaml@8cdff2c80573b8be8e8ad28929264a913a63aa33 # Pinned pip install
+    pip3 install pyyaml@8cdff2c80573b8be8e8ad28929264a913a63aa33 --require-hashes # Pinned pip install
 RUN \
     apt-get install python3-pip@368c7b4c557e673b05b0f8cffc967d3e333eee19 && \
     pip3 install pyyaml@8cdff2c80573b8be8e8ad28929264a913a63aa33 # Pinned pip install
