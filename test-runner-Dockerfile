@@ -1,0 +1,7 @@
+FROM golang:1.19-alpine as build
+
+FROM golang:1.19-alpine
+
+FROM alpine as build
+
+FROM alpine
