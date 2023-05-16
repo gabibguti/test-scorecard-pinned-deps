@@ -4,4 +4,12 @@
     "config:base"
   ],
   "pinDigests": true
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true
+  }
 }
