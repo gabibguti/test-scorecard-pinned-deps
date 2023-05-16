@@ -1,7 +1,7 @@
 # Dockerfile with notpinned dependencies
 
 # # Not pinned container image
-FROM ubuntu:18.04
+FROM ubuntu:18.04@sha256:14f1045816502e16fcbfc0b2a76747e9f5e40bc3899f8cfe20745abaafeaeab3
 
 # Pinned container image
 # FROM ubuntu@sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9

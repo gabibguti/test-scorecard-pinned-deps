@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2 # GitHub-owned not pinned dependency
+      uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2 # GitHub-owned not pinned dependency
     - name: Setup Go
       uses: actions/setup-go@6edd4406fa81c3da01a34fa6f6343087c207a568 # Github-owned pinned dependency
       with:
@@ -23,6 +23,6 @@ jobs:
     - name: Setup R
       uses: r-lib/actions/setup-r@f5b3dfbf1942ce68283de21bf65cce051e3a2c4d # Third-party pinned dependency
     - name: Install R packages
-      uses: r-lib/actions/setup-r-dependencies@v2 # Third-party not pinned dependency
+      uses: r-lib/actions/setup-r-dependencies@b9b479b26069f3cfea18358b4a511478308b2a9e # v2 # Third-party not pinned dependency
     - name: Install R packages
       uses: r-lib/actions/setup-r-dependencies@main # Third-party not pinned dependency
