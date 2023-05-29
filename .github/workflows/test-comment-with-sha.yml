@@ -1,16 +1,16 @@
 #   | Table       |
 #   | ----------- |
 #   | Lorem ipsum |
-#   | actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247 |
-#   | actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247 # v3.5.1 |
-#   | actions/checkout@v3 |
-#   | actions/checkout@v3.5.1 |
+#   | Run actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247 |
+#   | Run actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247 # v3.5.1 |
+#   | Run actions/checkout@v3 |
+#   | Run actions/checkout@v3.5.1 |
 #
 #   Outside table scope
-#   actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247
-#   actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247 # v3.5.1
-#   actions/checkout@v3
-#   actions/checkout@v3.5.1
+#   Run actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247
+#   Run actions/checkout@83b7061638ee4956cf7545a6f7efe594e5ad0247 # v3.5.1
+#   Run actions/checkout@v3
+#   Run actions/checkout@v3.5.1
 
 name: Test if comment with SHA is not updated by dependabot/renovatebot
 
