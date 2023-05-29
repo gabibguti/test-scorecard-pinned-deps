@@ -3,7 +3,7 @@
   "extends": [
     "config:base"
   ],
-  "pinDigests": false,
+  "pinDigests": true,
   "packageRules": [
     {
       "matchManagers": ["npm"]
