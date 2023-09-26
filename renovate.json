@@ -26,7 +26,7 @@
       "fileMatch": ["^main.yml$"],
       "matchStringsStrategy": "combination",
       "matchStrings": [
-        "uses: (?<datasource>.*?)/(?<depName>.*?)@(?<currentDigest>.*) # (?<currentValue>.*)"
+        "uses: (?<datasource>.*?)/(?<depName>.*?)@(?<currentDigest>.*) #(?<currentValue>.*)"
       ]
     }
   ]
