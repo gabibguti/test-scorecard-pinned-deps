@@ -18,4 +18,4 @@ jobs:
       - name: Install Clang
         run: curl -fsSL -o LLVM${{ matrix.version }}.exe https://github.com/llvm/llvm-project/releases/download/llvmorg-${{ matrix.version }}.0.0/LLVM-${{ matrix.version }}.0.0-win64.exe ; 7z x LLVM${{ matrix.version }}.exe -y -o"C:/Program Files/LLVM"
       - name: Setup MSYS2
-        uses: msys2/setup-msys2@ed3299bd1081c86dd0b97ecff428845793be8368 #v2.20.0
+        uses: msys2/setup-msys2@7e5c1c8761fb96b55676bafd4fd3a641660c5d55 # v2.20.0
