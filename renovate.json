@@ -21,6 +21,13 @@
         "Run (?<datasource>.*?)/(?<depName>.*?)@(?<currentValue>.*)",
         "uses: (?<datasource>.*?)/(?<depName>.*?)@(?<currentValue>.*)"
       ]
+    },
+    {
+      "fileMatch": ["^main.yml$"],
+      "matchStringsStrategy": "combination",
+      "matchStrings": [
+        "uses: (?<datasource>.*?)/(?<depName>.*?)@(?<currentDigest>.*) # (?<currentValue>.*)"
+      ]
     }
   ]
 }
