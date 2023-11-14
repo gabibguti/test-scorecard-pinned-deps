@@ -1,0 +1,19 @@
+name: "Test dangerous pattern"
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Test script injection
+      run: |
+        echo "${{ github.event.pull_request.head.ref }}"
+        if [[ ${{ github.event.pull_request.head.ref }} == owl-bot-copy ]]; then
+          echo "Is owl-bot-copy"; else
+          echo "Is NOT owl-bot-copy";
+        fi
