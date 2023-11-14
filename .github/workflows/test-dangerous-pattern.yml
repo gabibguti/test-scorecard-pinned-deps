@@ -22,6 +22,7 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
+            console.log(context.payload.pull_request.title)
             if (!context.payload.pull_request.title === "chore: regenerate README") {
               console.log("TRUE");
               return;
