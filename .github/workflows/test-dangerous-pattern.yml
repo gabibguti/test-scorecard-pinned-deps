@@ -23,7 +23,7 @@ jobs:
         with:
           script: |
             if (!context.payload.pull_request.title === "chore: regenerate README") {
-              echo "TRUE";
+              console.log("TRUE");
               return;
             }
-            echo "FALSE";
+            console.log("END");
