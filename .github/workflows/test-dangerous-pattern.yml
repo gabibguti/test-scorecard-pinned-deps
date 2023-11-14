@@ -9,11 +9,19 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+    # steps:
+    # - name: Test script injection
+    #   run: |
+    #     echo "${{ github.event.pull_request.head.ref }}"
+    #     if [[ ${{ github.event.pull_request.head.ref }} == owl-bot-copy ]]; then
+    #       echo "Is owl-bot-copy"; else
+    #       echo "Is NOT owl-bot-copy";
+    #     fi
+    if: github.head_ref == 'test-my-ref'
     steps:
-    - name: Test script injection
-      run: |
-        echo "${{ github.event.pull_request.head.ref }}"
-        if [[ ${{ github.event.pull_request.head.ref }} == owl-bot-copy ]]; then
-          echo "Is owl-bot-copy"; else
-          echo "Is NOT owl-bot-copy";
-        fi
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            if (!context.payload.pull_request.title === "chore: regenerate README") {
+              return;
+            }
