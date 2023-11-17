@@ -21,12 +21,13 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            var title = context.payload.pull_request.title
-            console.log(title)
-            console.log(typeof title)
-            if (title == "octocat") {
-              console.log("PR title is 'octocat'")
-            }
-            else {
-              console.log("PR title is not 'octocat'")
-            }
+            # var title = context.payload.pull_request.title
+            # console.log(title)
+            # console.log(typeof title)
+            # if (title == "octocat") {
+            #   console.log("PR title is 'octocat'")
+            # }
+            # else {
+            #   console.log("PR title is not 'octocat'")
+            # }
+            console.log(${{ github.event.pull_request.title }})
