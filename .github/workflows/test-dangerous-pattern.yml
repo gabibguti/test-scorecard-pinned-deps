@@ -17,16 +17,14 @@ jobs:
     #       echo "Is owl-bot-copy"; else
     #       echo "Is NOT owl-bot-copy";
     #     fi
-    if: github.head_ref == 'test-my-ref'
     steps:
       - uses: actions/github-script@v6
         with:
           script: |
-            console.log(context.payload.pull_request.title);
-            console.log(!context.payload.pull_request.title);
-            console.log(!context.payload.pull_request.title === "chore: regenerate README");
-            if (!context.payload.pull_request.title === "chore: regenerate README") {
-              console.log("TRUE");
-              return;
+            var title = context.payload.pull_request.title
+            if (title == "octocat") {
+              console.log("PR title is 'octocat'")
             }
-            console.log("END")
+            else {
+              console.log("PR title is not 'octocat'")
+            }
