@@ -23,7 +23,7 @@ jobs:
           script: |
             var title = context.payload.pull_request.title
             console.log(title)
-            console.log(type(title))
+            console.log(typeof title)
             if (title == "octocat") {
               console.log("PR title is 'octocat'")
             }
