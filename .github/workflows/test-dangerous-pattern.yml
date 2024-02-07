@@ -1,7 +1,8 @@
 name: "Test dangerous pattern"
 
 on:
-  pull_request:
+  push:
+    branches: ['main']
 
 permissions:
   contents: read
@@ -18,9 +19,19 @@ jobs:
     #       echo "Is NOT owl-bot-copy";
     #     fi
     steps:
-      - uses: actions/github-script@v6
-        with:
-          script: |
+      - run: |
+          title="$(cat <<- 'COMMIT_MESSAGE_END' | head -n 1 -
+          ${{ github.event.head_commit.message }}
+          COMMIT_MESSAGE_END
+          )"
+          echo "$title"
+          test="$(cat <<- 'COMMIT_MESSAGE_END' | "my message"
+          COMMIT_MESSAGE_END
+          )"
+          echo "$test"
+      # - uses: actions/github-script@v6
+        # with:
+          # script: |
             # var title = context.payload.pull_request.title
             # console.log(title)
             # console.log(typeof title)
@@ -30,4 +41,4 @@ jobs:
             # else {
             #   console.log("PR title is not 'octocat'")
             # }
-            console.log(${{ github.event.pull_request.title }})
+            # console.log(${{ github.event.pull_request.title }})
