@@ -1,0 +1,5 @@
+exemptions:
+  - checks:
+      - binary-artifacts
+    annotations:
+      - annotation: test-data
