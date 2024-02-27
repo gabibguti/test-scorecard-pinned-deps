@@ -1,1 +1,6 @@
-exemptions: "hi"
+exemptions:
+  - checks:
+      - binary-artifacts
+    annotations:
+      # a set of binary files is used for testing
+      - annotation: test-data
