@@ -7,7 +7,7 @@ permissions:
   contents: read
 
 jobs:
-  clang:
+  clang-my:
     runs-on: windows-2019
     strategy:
       matrix:
