@@ -4,7 +4,7 @@ on:
   pull_request:
 
 env:
-  PR_TITLE: github.event.pull_request.title
+  PR_TITLE: ${{ github.event.pull_request.title }}
 
 jobs:
   job:
