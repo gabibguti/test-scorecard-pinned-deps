@@ -1,0 +1,13 @@
+name: Unsafe var
+
+on:
+  pull_request:
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          if [[ ${{ github.event.pull_request.title }} == owl-bot-copy ]]; then
+            echo "PR is owl-bot-copy"
+          fi
