@@ -1,7 +1,7 @@
-exemptions:
+annotations:
   - checks:
       - binary-artifacts
       - pinned-dependencies
-    annotations:
+    reasons:
       # binary files / unpinned dependency files are only used for testing
-      - annotation: test-data
+      - reason: test-data
