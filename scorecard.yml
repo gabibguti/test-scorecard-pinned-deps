@@ -5,3 +5,4 @@ annotations:
     reasons:
       # binary files / unpinned dependency files are only used for testing
       - reason: test-data
+      - reason: remediated
