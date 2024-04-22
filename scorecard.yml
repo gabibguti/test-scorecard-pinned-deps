@@ -1,6 +1,6 @@
 annotations:
   - checks:
-      - binary-artifacts
+      - bla
       - pinned-dependencies
     reasons:
       # binary files / unpinned dependency files are only used for testing
