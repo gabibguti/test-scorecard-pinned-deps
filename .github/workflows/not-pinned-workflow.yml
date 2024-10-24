@@ -21,8 +21,8 @@ jobs:
       with:
         node-version: 16
     - name: Setup R
-      uses: r-lib/actions/setup-r@f5b3dfbf1942ce68283de21bf65cce051e3a2c4d # Third-party pinned dependency
+      uses: r-lib/actions/setup-r@d8b80f6aec8b653a0866f75b33e9c1401216bffe # Third-party pinned dependency
     - name: Install R packages
-      uses: r-lib/actions/setup-r-dependencies@b9b479b26069f3cfea18358b4a511478308b2a9e # v2 # Third-party not pinned dependency
+      uses: r-lib/actions/setup-r-dependencies@e6be4b3706e0f39bc7a4cf4496a5f2c4cb840040 # v2 # Third-party not pinned dependency
     - name: Install R packages
       uses: r-lib/actions/setup-r-dependencies@main # Third-party not pinned dependency
