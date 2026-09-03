@@ -1,7 +1,7 @@
 # Dockerfile with notpinned dependencies
 
 # # Not pinned container image
-FROM ubuntu:23.04
+FROM ubuntu:lunar-20231128@sha256:5a828e28de105c3d7821c4442f0f5d1c52dc16acf4999d5f31a3bc0f03f06edd
 
 # Pinned container image
 # FROM ubuntu@sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9
